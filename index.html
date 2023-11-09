@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <title>Gestión de Actividades</title>
 </head>
 <body>
-    
+  <div class="container mt-5">
+    <h1 class="mb-4">Lista de Actividades</h1>
+    <div class="btn-group mb-4" id="filters">
+      <button class="btn btn-primary" onclick="filterActivities('all')">Todas</button>
+      <button class="btn btn-primary" onclick="filterActivities('completed')">Cumplidas</button>
+      <button class="btn btn-primary" onclick="filterActivities('uncompleted')">No Cumplidas Vigentes</button>
+      <button class="btn btn-primary" onclick="filterActivities('completedNotVigent')">Cumplidas No Vigentes</button>
+    </div>
+    <ul class="list-group" id="activityList"></ul>
+  </div>
+
+
+  <div class="mt-4">
+    <h2>Agregar Nueva Actividad</h2>
+    <form id="addActivityForm" class="form-inline">
+      <div class="form-group mx-sm-3 mb-2">
+        <input type="text" class="form-control" id="activityInput" placeholder="Nombre de la actividad" required>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <input type="date" class="form-control" id="activityDate" min="2023-01-01" required>
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Agregar Actividad</button>
+    </form>
+  </div>
+</div>
+  
+
+  <script src="data.js"></script>
 </body>
 </html>
+
+
+
+
